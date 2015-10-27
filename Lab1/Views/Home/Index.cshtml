@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Lab1.Models.ClientModel>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="resultTable">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+                <th>@Html.DisplayNameFor(model => model.LastName)</th>
+                <th>@Html.DisplayNameFor(model => model.Birthdate)</th>
+                <th>@Html.DisplayNameFor(model => model.Gender)</th>
+                <th>@Html.DisplayNameFor(model => model.PassportSerie)</th>
+                <th>@Html.DisplayNameFor(model => model.PassportNumber)</th>
+                <th>@Html.DisplayNameFor(model => model.PassportIssuingAuthority)</th>
+                <th>@Html.DisplayNameFor(model => model.IssueDate)</th>
+                <th>@Html.DisplayNameFor(model => model.IndentityNo)</th>
+                <th>@Html.DisplayNameFor(model => model.LocationCity)</th>
+                <th>@Html.DisplayNameFor(model => model.LocationAddress)</th>
+                <th>@Html.DisplayNameFor(model => model.MobilePhoneNumber)</th>
+                <th>@Html.DisplayNameFor(model => model.Email)</th>
+                <th>@Html.DisplayNameFor(model => model.Job)</th>
+                <th>@Html.DisplayNameFor(model => model.JobPosition)</th>
+                <th>@Html.DisplayNameFor(model => model.RegistrationCity)</th>
+                <th>@Html.DisplayNameFor(model => model.RegistrationAddress)</th>
+                <th>@Html.DisplayNameFor(model => model.MaritalStatus)</th>
+                <th>@Html.DisplayNameFor(model => model.Nationality)</th>
+                <th>@Html.DisplayNameFor(model => model.Disability)</th>
+                <th>@Html.DisplayNameFor(model => model.Pensioner)</th>
+                <th>@Html.DisplayNameFor(model => model.MonthlyIncome)</th>
+                <th>@Html.DisplayNameFor(model => model.Liable)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var client in Model)
+            {
+                var id = "client" + client.Id.ToString();
+                <tr id=@id>
+                    <td>@Html.DisplayFor(model => client.FirstName)</td>
+                    <td>@Html.DisplayFor(model => client.LastName)</td>
+                    <td>@Html.DisplayFor(model => client.Birthdate)</td>
+                    <td>@Html.DisplayFor(model => client.Gender)</td>
+                    <td>@Html.DisplayFor(model => client.PassportSerie)</td>
+                    <td>@Html.DisplayFor(model => client.PassportNumber)</td>
+                    <td>@Html.DisplayFor(model => client.PassportIssuingAuthority)</td>
+                    <td>@Html.DisplayFor(model => client.IssueDate)</td>
+                    <td>@Html.DisplayFor(model => client.IndentityNo)</td>
+                    <td>@Html.DisplayFor(model => client.LocationCity)</td>
+                    <td>@Html.DisplayFor(model => client.LocationAddress)</td>
+                    <td>@Html.DisplayFor(model => client.MobilePhoneNumber)</td>
+                    <td>@Html.DisplayFor(model => client.Email)</td>
+                    <td>@Html.DisplayFor(model => client.Job)</td>
+                    <td>@Html.DisplayFor(model => client.JobPosition)</td>
+                    <td>@Html.DisplayFor(model => client.RegistrationCity)</td>
+                    <td>@Html.DisplayFor(model => client.RegistrationAddress)</td>
+                    <td>@Html.DisplayFor(model => client.MaritalStatus)</td>
+                    <td>@Html.DisplayFor(model => client.Nationality)</td>
+                    <td>@Html.DisplayFor(model => client.Disability)</td>
+                    <td>@Html.DisplayFor(model => client.Pensioner)</td>
+                    <td>@Html.DisplayFor(model => client.MonthlyIncome)</td>
+                    <td>@Html.DisplayFor(model => client.Liable)</td>
+                    <td>@Html.ActionLink("Edit", "Edit", new { id = client.Id})
+                        @Html.ActionLink("Remove", "Remove",new { id = client.Id })
+                        </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

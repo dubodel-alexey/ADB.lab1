@@ -1,0 +1,74 @@
+﻿@model Lab1.Entities.Client
+
+@using (Ajax.BeginForm("Add", new AjaxOptions { OnSuccess = "onSuccess" }))
+{
+    <div class="form-group">
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.Birthdate, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.Gender, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.PassportSerie, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.PassportNumber, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.PassportIssuingAuthority, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.IssueDate, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.IndentityNo, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.PlaceOfBirth, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.LocationCity, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.LocationAddress, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.MobilePhoneNumber, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.Work, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.JobPosition, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.RegistrationCity, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.RegistrationAddress, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.PassportIssuingAuthority, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.MaritalStatus, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.Pensioner, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.MonthlyIncome, new { @class = "form-control" })
+    </div>
+    <div class="form-group ">
+        @Html.TextBoxFor(m => m.Liable, new { @class = "form-control" })
+    </div>
+}
